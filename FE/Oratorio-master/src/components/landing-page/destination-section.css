@@ -1,0 +1,61 @@
+.destination-card {
+  position: relative;
+  border-radius: 16px; /* Sudut lebih bulat */
+  overflow: hidden;
+  height: 250px;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px) scale(1.03); /* Efek mengangkat yang lebih halus */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.destination-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* Gradien lebih tinggi */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  border-radius: 0 0 16px 16px;
+}
+
+.card-name {
+  position: absolute;
+  bottom: 1.5rem; /* Posisi teks sedikit lebih tinggi */
+  left: 1.5rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Bayangan teks agar lebih terbaca */
+}
+.card-description {
+  position: absolute;
+  bottom: 0.5rem; /* Posisi teks sedikit lebih tinggi */
+  left: 1.5rem;
+  color: #ddd;
+  font-size: 0.9rem;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Bayangan teks agar lebih terbaca */
+}
+
+.login-container {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}

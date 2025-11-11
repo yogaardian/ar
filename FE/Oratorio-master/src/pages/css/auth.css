@@ -1,0 +1,212 @@
+/* --- CSS BERSAMA UNTUK LOGIN & REGISTER --- */
+
+/* Wrapper untuk menengahkan kartu di halaman */
+.auth-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+  padding: 2rem 1rem; /* Padding untuk mobile */
+  box-sizing: border-box;
+}
+
+/* Kartu utama yang berisi semua konten */
+.auth-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%; /* Lebar maksimal kartu di desktop */
+  text-align: center;
+  overflow: hidden; /* Penting untuk trik margin di footer */
+  padding: 2.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  padding: 80px;
+}
+
+.auth-container > p {
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-top: -2.5rem;
+}
+
+.auth-form {
+  width: 40%; /* Form mengisi seluruh lebar kartu */
+  text-align: left;
+  margin-bottom: 1rem;
+  align-items: center;
+  margin: auto;
+  padding: 5px;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; 
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #00332a;
+}
+
+.auth-links {
+  display: flex;
+  justify-content: space-around; /* Menggantikan gap tetap */
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0px;
+    margin-top: auto;
+    padding: 10px;
+}
+.auth-links a {
+  color: #004d40;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  margin: 1.5rem 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+.separator span {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.social-logins {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-btn svg {
+  height: 24px;
+}
+
+.legal-text {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
+  padding: 25px;
+}
+.legal-text a {
+  color: #555;
+  font-weight: 500;
+}
+
+/* --- FOOTER DI DALAM KARTU --- */
+.login-footer {
+  background-color: #121212;
+  color: #a7a7a7;
+  padding: 2.5rem;
+  /* Margin negatif disesuaikan dengan padding parent */
+  margin: 2.5rem -2.5rem -2.5rem -2.5rem; 
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1.5rem;
+}
+.footer-social svg {
+  fill: white;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr; /* Default 1 kolom untuk mobile */
+  gap: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+.link-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.link-column a {
+  color: #a7a7a7;
+  text-decoration: none;
+  font-size: 12px;
+}
+.footer-copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+  font-size: 12px;
+}
+
+/* --- PENYESUAIAN DESKTOP (Layar 768px ke atas) --- */
+@media (min-width: 768px) {
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom di desktop */
+  }
+}

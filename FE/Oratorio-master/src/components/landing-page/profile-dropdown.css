@@ -1,0 +1,59 @@
+/* Kontainer utama untuk dropdown */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tombol ikon yang menjadi pemicu */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-toggle svg {
+  color: #333; /* Warna ikon */
+}
+
+/* Styling untuk menu dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 120%; /* Posisi di bawah ikon dengan sedikit jarak */
+  right: 0; /* Rata kanan dengan ikon */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  width: 160px; /* Lebar menu */
+  z-index: 1000; /* Pastikan menu di atas konten lain */
+}
+
+/* Styling untuk setiap item di menu */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+/* Efek hover pada item menu */
+.dropdown-menu li a:hover {
+  background-color: #f5f5f5;
+}
+
+.login-container {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}

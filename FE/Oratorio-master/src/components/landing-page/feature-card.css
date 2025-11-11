@@ -1,0 +1,50 @@
+.feature-card {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #004d40; /* hijau gelap */
+  border-radius: 12px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* agar ikon jadi putih */
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.75rem;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.login-container {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}

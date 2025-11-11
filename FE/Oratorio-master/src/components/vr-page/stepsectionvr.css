@@ -1,0 +1,129 @@
+.vr-steps-container {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.mode-selection-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.mode-card {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 30px;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.mode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mode-card.selected {
+    border-color: #008080;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.2);
+}
+
+.mode-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.mode-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.mode-card .steps-list {
+    padding-left: 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.mode-card .steps-list li::marker {
+    font-weight: 700;
+    color: #333;
+}
+
+.device-recommendation-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.device-card img {
+    max-width: 200px;
+    border-radius: 12px;
+}
+
+.device-info {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+.mulai-vr-button {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+}
+
+.mulai-vr-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        text-align: center;
+    }
+    .mode-selection-grid {
+        flex-direction: column;
+    }
+    .device-recommendation-grid {
+        gap: 20px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .device-card img {
+        max-width: 180px;
+    }
+}

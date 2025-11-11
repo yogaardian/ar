@@ -1,0 +1,87 @@
+.responsive-search-bar {
+  background-color: #fff;
+  color: #000;
+  border-radius: 9999px; /* Membuat bentuk pil */
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  width: 100%; /* Kunci: pastikan search bar mengisi wrapper-nya */
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-align: left;
+}
+
+/* --- STYLE UNTUK MOBILE (DEFAULT) --- */
+.desktop-view {
+  display: none;
+}
+
+.mobile-view {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  color: #000;
+  font-size: 1rem;
+}
+
+/* --- STYLE UNTUK DESKTOP (Layar 768px ke atas) --- */
+@media (min-width: 768px) {
+  .mobile-view {
+    display: none;
+  }
+
+  .desktop-view {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-section {
+    flex-grow: 1;
+    display: flex;
+    padding: 0 24px;
+    margin-left: 30%;
+    gap: 19px;
+  }
+
+  .search-section label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .search-section span {
+    font-size: 0.9rem;
+    color: #000;
+  }
+
+  .search-divider {
+    width: 1px;
+    height: 40px;
+    background-color: #ddd;
+  }
+
+  .search-button-desktop {
+    background-color: #0a7068;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-left: 8px;
+  }
+}
+.search-button-desktop:hover {
+  background-color: #009b8c;
+}
+
+.login-container {
+  background-color: #f4f5f7;
+  color: #000;
+  transition: all 0.3s ease;
+}

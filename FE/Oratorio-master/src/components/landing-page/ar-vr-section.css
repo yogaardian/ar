@@ -1,0 +1,140 @@
+.arvr-section {
+  padding: 5rem 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+/* === BLOK AR/VR (GRID CROSS ALIGNMENT) === */
+.arvr-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem 1px;
+  max-width: 1200px;
+}
+
+/* === GAMBAR === */
+.arvr-image {
+  display: flex;
+  justify-content: center;
+}
+
+.arvr-image img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 2.5rem;
+}
+
+/* === KONTEN === */
+.arvr-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.arvr-title {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.arvr-desc {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.arvr-spec {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arvr-spec h4 {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.arvr-spec p {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* === POSISI SILANG === */
+.arvr-block:nth-child(1) {
+  /* AR block */
+  grid-template-areas:
+    "imageVR contentAR"
+    "contentVR imageAR";
+}
+
+.arvr-block:nth-child(2) {
+  /* VR block */
+  display: none; /* tidak perlu, karena kita gabung jadi satu area silang */
+}
+
+/* === CTA BUTTON === */
+.arvr-cta {
+  margin-top: 2rem;
+}
+
+.arvr-cta button {
+  background-color: #097061;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arvr-cta button:hover {
+  background-color: #1c8a79;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .arvr-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .arvr-image img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .arvr-title {
+    text-align: center;
+  }
+
+  .arvr-desc,
+  .arvr-spec {
+    text-align: center;
+  }
+}
+
+.login-container {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}

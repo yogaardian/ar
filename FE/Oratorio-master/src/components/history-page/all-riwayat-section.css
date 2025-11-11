@@ -1,0 +1,88 @@
+.all-riwayat-container {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Menggunakan kembali class .content-wrapper dan .section-title */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.history-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Agar tabel bisa di-scroll horizontal di mobile */
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.history-table th,
+.history-table td {
+    padding: 20px 15px;
+    color: #333;
+}
+
+.history-table th {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #888;
+}
+
+.history-table td {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.history-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Hilangkan border di baris terakhir */
+.history-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Penyesuaian Mobile (Layout tabel menjadi kartu) */
+@media (max-width: 768px) {
+    .history-table thead {
+        display: none; /* Sembunyikan header tabel */
+    }
+
+    .history-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    .history-table td {
+        display: block;
+        text-align: right; /* Rata kanan untuk isi data */
+        padding: 10px 5px;
+        border-bottom: 1px dotted #ccc;
+    }
+    
+    .history-table td:last-child {
+        border-bottom: none;
+    }
+
+    .history-table td::before {
+        content: attr(data-label); /* Ambil label dari atribut data-label */
+        float: left; /* Rata kiri untuk label */
+        font-weight: 600;
+        color: #333;
+    }
+}

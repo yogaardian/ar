@@ -1,0 +1,129 @@
+/* Variabel Global untuk konsistensi desain */
+:root {
+    --primary-color: #008080;
+    --primary-color-hover: #006666;
+    --text-dark: #1a1a1a;
+    --text-light: #6c757d;
+    --background-light: #ffffff;
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --card-radius: 16px;
+    --button-radius: 12px;
+}
+
+/* Gaya dasar & pembungkus */
+.riwayat-section-container {
+    padding: 60px 20px;
+    background-color: var(--background-light);
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Halaman Utama */
+.page-header {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: auto;
+    margin-left: -83px;
+}
+
+.page-header .subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 100px;
+    margin-right: 400px;
+
+}
+
+/* Kartu Destinasi */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.destinasi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.destinasi-card {
+    background-color: var(--background-light);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    height: 400px;
+}
+
+.destinasi-card:hover {
+    transform: translateY(-5px);
+}
+
+.destinasi-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destinasi-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.location-icon {
+    margin-right: 8px;
+}
+
+.visit-again-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 15px 15px 15px;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.visit-again-button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* Penyesuaian Responsif (Mobile) */
+@media (max-width: 992px) {
+    .destinasi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .destinasi-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,130 @@
+/* ============================================== */
+/* === HEADER HALAMAN & STATISTIK === */
+/* ============================================== */
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a222e;
+    margin: 0 0 -50px -80px;
+}
+
+.dashboard-header p {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-right: 10px
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 128, 128, 0.15);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: #008080;
+    background-color: #e6f9f1;
+}
+
+.stat-info h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.stat-info p {
+    margin: 5px 0 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a222e;
+}
+
+
+/* ============================================== */
+/* === GRID UTAMA UNTUK GRAFIK & AKTIVITAS === */
+/* ============================================== */
+.dashboard-main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Grafik 66%, Tabel 33% */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.dashboard-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-section h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    color: #1a222e;
+}
+
+
+/* ============================================== */
+/* === STYLING ULANG TABEL AKTIVITAS === */
+/* ============================================== */
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th, .activity-table td {
+    padding: 15px 5px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.activity-table thead th {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+.activity-table tbody td {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.activity-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Penyesuaian untuk Mobile */
+@media (max-width: 992px) {
+    .dashboard-main-grid {
+        grid-template-columns: 1fr; /* Susun vertikal di tablet & HP */
+    }
+}

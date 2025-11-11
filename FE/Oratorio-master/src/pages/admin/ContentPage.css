@@ -1,0 +1,73 @@
+/* Header Halaman */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.add-button {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tabel Umum */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.admin-table th, .admin-table td {
+    padding: 18px;
+    text-align: left;
+}
+
+.admin-table thead {
+    background-color: #f4f7fa;
+}
+
+.admin-table th {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.admin-table tbody tr {
+    border-bottom: 1px solid #eef2f7;
+}
+
+.admin-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Status & Tombol Aksi */
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.status.aktif { background-color: #e6f9f1; color: #008080; }
+.status.nonaktif { background-color: #fef3f2; color: #d92d20; }
+
+.action-buttons button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+.edit-btn { color: #6c757d; }
+.delete-btn { color: #d92d20; }

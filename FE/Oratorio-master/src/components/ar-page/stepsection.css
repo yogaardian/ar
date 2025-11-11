@@ -1,0 +1,149 @@
+/* Styling untuk Desktop (Tidak Berubah) */
+.steps-container {
+    background-color: #ffffff;
+    padding: 60px 20px 80px 20px;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.content-wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.step-card {
+    background-color: #ffffff;
+    border: 2px solid #008080;
+    border-radius: 16px;
+    padding: 25px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.tips-card {
+    display: flex;
+    align-items: start;
+    background-color: #ffffff;
+    border: 2px solid #008080;
+    border-radius: 16px;
+    padding: 20px 25px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    min-width: 380px;
+}
+
+.tips-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.tips-content {
+    color: #555;
+}
+
+.tips-content h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-weight: 700;
+}
+
+.tips-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.mulai-ar-button {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 20px 45px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.mulai-ar-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ============================================== */
+/* === PENYESUAIAN UNTUK TAMPILAN MOBILE === */
+/* ============================================== */
+@media (max-width: 768px) {
+
+    /* Mengatur ulang padding utama agar tidak terlalu lebar */
+    .steps-container {
+        padding: 40px 15px 60px 15px;
+    }
+
+    /* Mengubah layout kartu utama menjadi vertikal */
+    .steps-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Membuat lebar kartu menyesuaikan layar mobile */
+    .step-card {
+        width: 90%;
+        max-width: 400px; /* Batas lebar maks kartu */
+        padding: 20px;
+    }
+
+    /* Menyesuaikan ukuran font di dalam kartu */
+    .step-card h3 {
+        font-size: 1.2rem;
+    }
+    .step-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Menyesuaikan kartu tips & trik */
+    .tips-card {
+        width: 90%;
+        max-width: 400px;
+        min-width: auto; /* Hapus lebar minimum */
+        padding: 20px;
+    }
+
+    /* Menyesuaikan ukuran tombol */
+    .mulai-ar-button {
+        width: 90%;
+        max-width: 400px;
+        padding: 18px;
+        font-size: 1rem;
+    }
+}

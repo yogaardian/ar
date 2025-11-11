@@ -1,0 +1,167 @@
+/* === Base Header === */
+.site-header {
+  background-color: #ffffff;
+  color: #222;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Brand === */
+.header-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* === Navigation Center === */
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.header-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-link:hover {
+  color: #00796b;
+}
+
+/* === Dropdown === */
+.header-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* === User Dropdown === */
+.user-dropdown {
+  position: relative;
+}
+
+.user-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #eee;
+  padding: 6px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-icon-container:hover {
+  background-color: #ddd;
+}
+
+.user-menu {
+  right: 0;
+  left: auto;
+}
+
+/* === Hamburger Menu === */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* === Mobile Menu === */
+.header-links-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.header-links-mobile.active {
+  display: flex;
+}
+
+.header-links-mobile .header-link {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .header-center {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
