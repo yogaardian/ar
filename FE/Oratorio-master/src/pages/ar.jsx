@@ -10,7 +10,7 @@ const ArDetailGuidancePage = () => {
 
   useEffect(() => {
     let mounted = true;
-    axios.get(`http://192.168.110.3:5000/api/wisata/${id}`)
+    axios.get(`http://192.168.23.214:5000/api/wisata/${id}`)
       .then(res => {
         if (mounted) {
           setData(res.data);
@@ -148,7 +148,7 @@ const ArDetailGuidancePage = () => {
                 <div className="relative bg-gradient-to-br from-[#C9E4E2] to-[#005954] rounded-2xl overflow-hidden shadow-inner">
                   <div className="aspect-video flex items-center justify-center p-4">
                     <img
-                      src={`http://192.168.110.3:5000/static/uploads/${data.marker_image}`}
+                      src={`http://192.168.23.214:5000/static/uploads/${data.marker_image}`}
                       alt="AR Marker"
                       className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
                       onError={(e) => { 
@@ -377,5 +377,3 @@ const ArDetailGuidancePage = () => {
     </div>
   );
 };
-
-export default ArDetailGuidancePage;
